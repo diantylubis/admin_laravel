@@ -35,7 +35,6 @@
                 <h6 class="collapse-header">Custom Pages:</h6>
                 <a class="collapse-item" href="{{ url ('admincollection')}}">Collection</a>
                 <a class="collapse-item" href="{{ url ('admingallery')}}">Gallery</a>
-                <a class="collapse-item" href="{{ url ('barang')}}">Barang</a>
             </div>
         </div>
     </li>

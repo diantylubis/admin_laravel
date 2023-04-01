@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\GalleryController;
 use App\http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TabelCollectionController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,10 +35,4 @@ Route::get('/', [AdminIndexController::class, 'index']);
 Route::get('/dashboard', [AdminIndexController::class, 'index']);
 Route::get('/admincollection',[TabelCollectionController::class, 'tabel']);
 Route::get('/admingallery', [AdminGalleryController::class, 'admingallery']);
-Route::get('/barang', [BarangController::class, 'barang']);
-
-Route::controller(BarangController::class)->prefix('barang')->group( function(){ 
-Route::get('tambah', 'tambah')->name('barang.tambah');
-Route::get('edit/{id}', 'edit')->name('barang.edit');
-Route::get('delete/{id}', 'delete')->name('barang.delete');
-});
+Route::get('/login',[LoginController::class, 'login']);
